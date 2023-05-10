@@ -47,6 +47,7 @@ for x in range(1,7,2):
 
 # örnek uygulama: 
 
+# 1 den 10 a kadar sayıların karelerini ekrana yazdırma : 
 sonuc = 1
 for i in range(10):
     sonuc *= 2
@@ -61,7 +62,7 @@ print(sonuc)                        # dongu bitince sonucu bastırdık / 1024
 # iç içe for döngüsü kullanımı
 
 liste1 = ["a","b","c"]
-liste2=[1,2,3]
+liste2 = [1,2,3]
 
 for harf in liste1:
     for rakam in liste2:
@@ -88,16 +89,21 @@ for i in liste:
 
 # örnek
 
-liste = range(20)                   # 0 dan 19a kadar bir range tanımladık.
+# 1 den 20 ye kadar sayılar arasında sadece 3e bölünenleri ekrana yazdırma, (15 sayısı hariç.)
 
-for i in liste:                     # i değişkeni ile döngü kurduk
-    if i%3 != 0:                    # eğer i 3e bölünmüyorsa devam et dedik
+liste = range(20)                   
+
+for i in liste:                     
+    if i%3 != 0:                    
         continue
-    if i == 15:                     # eğer i = 15 olursa yazdırmadan döngüden çık dedik.
+    if i == 15:                     
         break
     print(i)                        # 3 6 9 12 
 
+
 # While döngüsü 
+
+# while döngüsünde en önemli adım döngüden çıkabilmek için değişkenin artırmak veya azaltmaktır.
 
 # tanım : belirli bir koşul sağlandığı sürece çalışan döngüdür.
 
@@ -118,3 +124,30 @@ while True:
     i+=1
     if i == 100:
         break
+
+
+    # ------------------------------------------------------------------------------------------------------------------------------------------------------------------# 
+
+sehirler = ["adana","kars","van","muş","bitlis","ağrı"]
+
+for i in sehirler:
+    print(i[0:3])
+
+# / ada kar van muş bit ağr
+
+
+# girilen sayının asal olup olmadığını bulan bir uygulama:
+
+sayi = int(input("sayi : "))
+asal = True 
+for i in range(2,sayi):
+    if sayi%i == 0:
+        asal=False
+        break
+
+if asal == True:
+    print(sayi, "asal bir sayıdır.")
+else:
+    print(sayi, "asal bir sayı değildir.")
+
+
